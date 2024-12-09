@@ -25,6 +25,7 @@ MealTime is a modern, personalized meal management app that helps users plan mea
 ## Project Structure 🗂️
 
 The app follows the **Clean Architecture** structure:
+
 lib/
 ├── src/
     ├── app/
@@ -52,12 +53,14 @@ Current Progress ✅
 ### Next Priorities:
 - [ ] Install required flutter packages 
 ---
-
+## How to Run the Project
+1. Clone the repository
+2. 
 ## How to Contribute 🤝
 
 1. Fork the repository.
 2. Clone the forked repository:  
-   `git clone https://github.com/yourusername/MealTime.git`
+   `[git clone https://github.com//MealTime.git](https://github.com/OmarElhassaniAlaoui/MealTime_app.git)`
 3. Create a new branch for your feature or bug fix:  
    `git checkout -b feature-name`
 4. Commit your changes and push to the branch:  
