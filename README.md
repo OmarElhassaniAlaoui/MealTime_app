@@ -1,16 +1,74 @@
-# meal_time_app
+# MealTime 🍽️
 
-A new Flutter project.
+MealTime is a modern, personalized meal management app that helps users plan meals, track preferences, and manage dietary requirements effortlessly. Built with **Flutter**, following **Clean Architecture**, and managed with **Bloc State Management**, this app aims to provide an intuitive and streamlined experience for its users.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features ✨
 
-A few resources to get you started if this is your first Flutter project:
+- **Onboarding Flow**: Welcomes users and customizes their preferences (diets, allergies, dislikes, etc.).
+- **Personalized Meal Plans**: Users can select and manage meal plans tailored to their dietary requirements.
+- **Authentication**: Secure signup, login, and password reset features.
+- **User Feedback**: Allows users to rate meals and leave notes.
+- **Beautiful UI/UX**: Designed with a modern and user-friendly interface.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack 💻
+
+- **Flutter**: Framework for cross-platform app development.
+- **Clean Architecture**: Ensures scalability and separation of concerns.
+- **Bloc**: State management for predictable and testable workflows.
+
+---
+
+## Project Structure 🗂️
+
+The app follows the **Clean Architecture** structure:
+lib/
+├── src/
+    ├── app/
+        ├── core/
+        ├── resources/
+        ├── themes/
+        ├── widgets/
+    ├── data/
+        ├── data_sources/
+        ├── models/
+        ├── repository/
+    ├── domain/
+        ├── entities/
+        ├── repository/
+        ├── usecases/
+    ├── presentation/
+        ├── auth/
+        ├── home/
+        ├── widgets/
+
+Current Progress ✅
+### Completed Tasks:
+- [x] **Set up project structure** with Clean Architecture.
+- [x] **Theme setup**: Defined color palettes, typography, and spacing.
+### Next Priorities:
+- [ ] Install required flutter packages 
+---
+
+## How to Contribute 🤝
+
+1. Fork the repository.
+2. Clone the forked repository:  
+   `git clone https://github.com/yourusername/MealTime.git`
+3. Create a new branch for your feature or bug fix:  
+   `git checkout -b feature-name`
+4. Commit your changes and push to the branch:  
+   `git push origin feature-name`
+5. Open a pull request!
+
+---
+
+## Links 🔗
+
+- **GitHub Repo**: [MealTime]([https://github.com/yourusername/MealTime](https://github.com/OmarElhassaniAlaoui/MealTime_app))
+- **Figma Design**: [MealTime UI Kit](https://www.figma.com/design/hLXr2XOOpOqowjEAFc3Y8L/Recipe-App-UI-Kit-(Community)?node-id=0-1&node-type=canvas&t=ypb1ceWp2i2mAnyG-0)
+
+---
