@@ -54,13 +54,20 @@ Current Progress ✅
 - [ ] Install required flutter packages 
 ---
 ## How to Run the Project
-1. Clone the repository
-2. 
+1. Clone the repository:
+   `git clone https://github.com/OmarElhassaniAlaoui/MealTime_app.git`
+2.Navigate to the project directory:
+   `MealTime_app`
+3.Install dependencies:
+   `flutter pub get`
+4.Run the project:
+    `flutter run`
+
 ## How to Contribute 🤝
 
 1. Fork the repository.
 2. Clone the forked repository:  
-   `https://github.com/OmarElhassaniAlaoui/MealTime_app.git`
+   ` git clone https://github.com/OmarElhassaniAlaoui/MealTime_app.git`
 3. Create a new branch for your feature or bug fix:  
    `git checkout -b feature-name`
 4. Commit your changes and push to the branch:  
