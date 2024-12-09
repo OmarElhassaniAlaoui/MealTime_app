@@ -55,7 +55,7 @@ Current Progress ✅
 ---
 ## How to Run the Project
 
-1. Clone the repository:
+1. Clone the repository.
 `git clone https://github.com/OmarElhassaniAlaoui/MealTime_app.git`
 2.Navigate to the project directory:
 `MealTime_app`
