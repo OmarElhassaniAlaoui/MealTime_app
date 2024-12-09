@@ -60,7 +60,7 @@ Current Progress ✅
 
 1. Fork the repository.
 2. Clone the forked repository:  
-   `[git clone https://github.com//MealTime.git](https://github.com/OmarElhassaniAlaoui/MealTime_app.git)`
+   `https://github.com/OmarElhassaniAlaoui/MealTime_app.git`
 3. Create a new branch for your feature or bug fix:  
    `git checkout -b feature-name`
 4. Commit your changes and push to the branch:  
