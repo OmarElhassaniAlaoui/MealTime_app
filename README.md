@@ -54,14 +54,15 @@ Current Progress ✅
 - [ ] Install required flutter packages 
 ---
 ## How to Run the Project
+
 1. Clone the repository:
-   `git clone https://github.com/OmarElhassaniAlaoui/MealTime_app.git`
+`git clone https://github.com/OmarElhassaniAlaoui/MealTime_app.git`
 2.Navigate to the project directory:
-   `MealTime_app`
+`MealTime_app`
 3.Install dependencies:
-   `flutter pub get`
+`flutter pub get`
 4.Run the project:
-    `flutter run`
+`flutter run`
 
 ## How to Contribute 🤝
 
