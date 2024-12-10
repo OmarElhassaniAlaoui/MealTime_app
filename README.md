@@ -24,8 +24,9 @@ MealTime is a modern, personalized meal management app that helps users plan mea
 
 ## Project Structure 🗂️
 
-The app follows the **Clean Architecture** structure:
-`
+The app follows the **Clean Architecture** structure
+
+```
 lib/
 ├── src/
     ├── app/
@@ -45,7 +46,7 @@ lib/
         ├── auth/
         ├── home/
         ├── widgets/
-`
+```
 Current Progress ✅
 ### Completed Tasks:
 - [x] **Set up project structure** with Clean Architecture.
