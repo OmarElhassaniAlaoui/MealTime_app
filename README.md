@@ -80,8 +80,6 @@ Current Progress ✅
 ---
 
 ## Links 🔗
-
-- **GitHub Repo**: [MealTime]([https://github.com/yourusername/MealTime](https://github.com/OmarElhassaniAlaoui/MealTime_app))
 - **Figma Design**: [MealTime UI Kit](https://www.figma.com/design/hLXr2XOOpOqowjEAFc3Y8L/Recipe-App-UI-Kit-(Community)?node-id=0-1&node-type=canvas&t=ypb1ceWp2i2mAnyG-0)
 
 ---
