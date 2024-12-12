@@ -51,8 +51,10 @@ Current Progress ✅
 ### Completed Tasks:
 - [x] **Set up project structure** with Clean Architecture.
 - [x] **Theme setup**: Defined color palettes, typography, and spacing.
+- [x] Install required flutter packages
+- [x] setup routes
 ### Next Priorities:
-- [ ] Install required flutter packages 
+- [ ] create button reusable widget
 ---
 
 ## How to Run the Project
