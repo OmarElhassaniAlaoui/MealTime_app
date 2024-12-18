@@ -54,7 +54,7 @@ Current Progress ✅
 - [x] Install required flutter packages
 - [x] setup routes
 ### Next Priorities:
-- [ ] create button reusable widget
+- [x] create button reusable widget
 ---
 
 ## How to Run the Project
