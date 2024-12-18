@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppPalette {
-  AppPalette._();
+  AppPalette._(); 
+
   static const MaterialColor primarySwatch = MaterialColor(
     0xFFF58700,
     <int, Color>{
@@ -57,4 +58,6 @@ class AppPalette {
   static const Color black = Color(0xFF1A1A1A);
   static const Color white = Color(0xFFFFFFFF);
   static const Color backgroundColor = Color(0xFFFFFAF5);
+
+  // btn colors
 }

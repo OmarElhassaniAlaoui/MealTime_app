@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meal_time_app/src/app/widgets/Button-widget/button_enum.dart';
+import 'package:meal_time_app/src/app/widgets/Button-widget/button_widget.dart';
 
 class TemplatePage extends StatelessWidget {
   const TemplatePage({super.key});
@@ -9,8 +11,17 @@ class TemplatePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Title'),
       ),
-      body: const Center(
-        child: Text('Template Page'),
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 50),
+          child: ButtonWidget(
+            text: "Button",
+            borderRadius: 16.0,
+            type: ButtonType.disabled,
+            height: 57.0,
+            
+          ),
+        ),
       ),
     );
   }
