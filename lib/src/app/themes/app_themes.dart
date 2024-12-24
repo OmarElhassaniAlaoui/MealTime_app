@@ -14,5 +14,6 @@ class AppThemes {
     brightness: Brightness.light,
     primaryColor: AppPalette.primarySwatch,
     useMaterial3: false,
+    scaffoldBackgroundColor: AppPalette.backgroundColor,
   );
 }
