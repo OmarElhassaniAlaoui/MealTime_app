@@ -5,6 +5,6 @@ import 'package:meal_time_app/src/app/core/dependancy-injection/injection_contai
 
 
 void main() {
-   di.registerDependencies();
+  di.registerDependencies();
   runApp(const MealTimeApp());
 }

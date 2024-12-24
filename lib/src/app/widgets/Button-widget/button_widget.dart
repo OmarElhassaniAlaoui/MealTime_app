@@ -8,6 +8,7 @@ import 'package:meal_time_app/src/app/widgets/Button-widget/button_enum.dart';
 /// - Supports multiple button types: [ButtonType.primary], [ButtonType.secondary], [ButtonType.tertiary], and [ButtonType.disabled].
 /// - Can display a loading spinner when `isLoading` is true.
 /// - Supports enabling/disabling via the `isDisabled` flag.
+/// - Can optionally display an icon alongside the text.
 /// - Fully customizable in terms of width, height, border radius, and colors.
 ///
 /// Example:
@@ -20,6 +21,7 @@ import 'package:meal_time_app/src/app/widgets/Button-widget/button_enum.dart';
 ///   type: ButtonType.primary,
 ///   isLoading: false,
 ///   isDisabled: false,
+///   icon: Icon(Icons.add),
 /// )
 /// ```
 class ButtonWidget extends StatelessWidget {
@@ -48,6 +50,10 @@ class ButtonWidget extends StatelessWidget {
   /// Whether the button should be disabled. Defaults to `false`.
   final bool isDisabled;
 
+  /// An optional icon to display alongside the button text.
+  final Widget? icon;
+
+
   /// Creates a customizable button widget.
   const ButtonWidget({
     super.key,
@@ -59,6 +65,7 @@ class ButtonWidget extends StatelessWidget {
     this.borderRadius = 16.0,
     this.isLoading = false,
     this.isDisabled = false,
+    this.icon,
   });
 
   @override
@@ -75,7 +82,7 @@ class ButtonWidget extends StatelessWidget {
     );
   }
 
-  /// Builds the child widget for the button, which is either a loading spinner or the button text.
+  /// Builds the child widget for the button, which can be a loading spinner, text, or an icon with text.
   Widget _buildButtonChild() {
     if (isLoading) {
       return const SizedBox(
@@ -87,9 +94,21 @@ class ButtonWidget extends StatelessWidget {
         ),
       );
     }
-    return Text(
-      text,
-      style: _getTextStyle(),
+
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        if (icon != null) ...[
+          const SizedBox(width: 12),
+          icon!,
+        ],
+        SizedBox(width:  12 ),
+        Text(
+          text,
+          style: _getTextStyle(),
+        ),
+      ],
     );
   }
 
@@ -118,11 +137,11 @@ class ButtonWidget extends StatelessWidget {
   Color _getButtonColor() {
     switch (type) {
       case ButtonType.primary:
-        return AppPalette.primarySwatch[500]!;
+        return AppPalette.primarySwatch;
       case ButtonType.secondary:
         return AppPalette.white;
       case ButtonType.tertiary:
-        return AppPalette.primarySwatch[600]!;
+        return AppPalette.white;
       case ButtonType.disabled:
         return AppPalette.greySwatch;
     }
