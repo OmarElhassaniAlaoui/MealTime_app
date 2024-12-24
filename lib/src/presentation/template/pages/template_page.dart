@@ -9,7 +9,7 @@ class TemplatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Title'),
+        title: const Text('Template page'),
       ),
       body: Center(
         child: Padding(
@@ -19,7 +19,6 @@ class TemplatePage extends StatelessWidget {
             borderRadius: 16.0,
             type: ButtonType.disabled,
             height: 57.0,
-            
           ),
         ),
       ),
