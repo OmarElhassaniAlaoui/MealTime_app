@@ -19,6 +19,7 @@ class TemplatePage extends StatelessWidget {
             borderRadius: 16.0,
             type: ButtonType.disabled,
             height: 57.0,
+            icon: const Icon(Icons.add),
           ),
         ),
       ),
