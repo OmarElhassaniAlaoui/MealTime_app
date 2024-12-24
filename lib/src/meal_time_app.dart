@@ -15,7 +15,7 @@ class _MealTimeAppState extends State<MealTimeApp> {
     return MaterialApp.router(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: AppThemes.dark,
+      theme: AppThemes.light,
       routerConfig: AppPagesConfig().router,
     );
   }
