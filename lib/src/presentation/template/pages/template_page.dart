@@ -23,9 +23,10 @@ class TemplatePage extends StatelessWidget {
                   height: AppSpacing.s16,
                 ),
                 TextFieldWidget(
-                  placeholder: "Enter your name",
+                  placeholder: "Enter your password",
                   type: TextInputType.visiblePassword,
                   isHidden: true,
+                 suffixIcon: Icons.visibility,
                 ),
               ],
             )),
