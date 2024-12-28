@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meal_time_app/src/app/widgets/meal-card-widget/meal_card_widget.dart';
 
 class TemplatePage extends StatelessWidget {
   const TemplatePage({super.key});
@@ -14,8 +13,8 @@ class TemplatePage extends StatelessWidget {
             child: Form(
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-               MealCardWidget(), 
+              children: [ 
+                const Text('Template Page'),
               ],
             )),
           ),
