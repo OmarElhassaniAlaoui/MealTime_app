@@ -1,4 +1,4 @@
-enum MealCardEnum {
+enum MealCardType {
   pro,
   add,
   liked,
