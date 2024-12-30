@@ -4,6 +4,7 @@ import 'package:meal_time_app/src/app/themes/app_spacing.dart';
 import 'package:meal_time_app/src/app/themes/app_typography.dart';
 import 'package:meal_time_app/src/app/utils/extentions/keyboard_utile.dart';
 
+/// A customizable TextFormField widget that supports various input configurations.
 class TextFieldWidget extends StatelessWidget {
   const TextFieldWidget({
     super.key,
@@ -20,16 +21,37 @@ class TextFieldWidget extends StatelessWidget {
     this.onSuffixPressed,
   });
 
+  /// Placeholder text to be displayed when the input field is empty.
   final String placeholder;
+
+  /// Type of keyboard to display, e.g., `TextInputType.emailAddress` or `TextInputType.number`.
   final TextInputType? type;
+
+  /// Initial value for the input field, used when no controller is provided.
   final String? initialValue;
+
+  /// Controller for managing the input text programmatically.
   final TextEditingController? controller;
+
+  /// A function for validating the input, returning an error message if invalid.
   final String? Function(String?)? validator;
+
+  /// Whether the input text should be hidden, typically for passwords.
   final bool isHidden;
+
+  /// Whether the input field should be disabled (read-only).
   final bool isDisabled;
+
+  /// Whether the input field should act as a text area (multi-line input).
   final bool isTextarea;
+
+  /// Icon to be displayed as a suffix in the input field.
   final IconData? suffixIcon;
+
+  /// A callback triggered whenever the input text changes.
   final Function(String)? onChanged;
+
+  /// A callback triggered when the suffix icon is pressed.
   final void Function()? onSuffixPressed;
 
   @override
@@ -52,6 +74,7 @@ class TextFieldWidget extends StatelessWidget {
     );
   }
 
+  /// Builds the input field decoration, including borders, colors, and suffix icon.
   InputDecoration? _buildDecoration() {
     return InputDecoration(
       hintText: placeholder,
@@ -81,6 +104,9 @@ class TextFieldWidget extends StatelessWidget {
     );
   }
 
+  /// Sets the border style and color for the input field.
+  /// 
+  /// - [color]: The color of the border.
   InputBorder? _setInputBorder(Color color) {
     return OutlineInputBorder(
       borderSide: BorderSide(color: color),
