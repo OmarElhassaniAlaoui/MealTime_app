@@ -12,8 +12,8 @@ class TemplatePage extends StatelessWidget {
           child: Center(
             child: Form(
                 child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ 
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                 const Text('Template Page'),
               ],
             )),
