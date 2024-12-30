@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_time_app/src/app/themes/app_palette.dart';
 import 'package:meal_time_app/src/app/themes/app_spacing.dart';
 import 'package:meal_time_app/src/app/themes/app_typography.dart';
+import 'package:meal_time_app/src/app/utils/extentions/keyboard_utile.dart';
 
 class TextFieldWidget extends StatelessWidget {
   const TextFieldWidget({
@@ -47,6 +48,7 @@ class TextFieldWidget extends StatelessWidget {
       decoration: _buildDecoration(),
       maxLines: isTextarea ? 3 : 1,
       onChanged: onChanged,
+      onTapOutside: (event) => context.hideKeyboard(),
     );
   }
 
