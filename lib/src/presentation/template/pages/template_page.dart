@@ -10,13 +10,7 @@ class TemplatePage extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: Center(
-            child: Form(
-                child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                const Text('Template Page'),
-              ],
-            )),
+            child: Text("Template Page"),
           ),
         ),
       ),
