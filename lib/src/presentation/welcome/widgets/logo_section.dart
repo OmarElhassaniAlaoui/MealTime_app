@@ -1,4 +1,4 @@
-part of '../pages/template_page.dart';
+part of '../../welcome/pages/welcome_page.dart';
 
 class _LogoSection extends StatelessWidget {
   const _LogoSection();
