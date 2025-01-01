@@ -6,6 +6,7 @@ abstract class _Paths {
   /// welcome page
   ///
   static const spalsh = '/spalsh';
+  static const welcome = '/welcome';
   static const home = '/home';
   static const template = '/template';
 }
@@ -17,6 +18,7 @@ abstract class AppRoutes {
   /// welcome page
   ///
   static const splash = _Paths.spalsh;
+  static const welcome = _Paths.welcome;
   static const home = _Paths.home;
   static const template = _Paths.template;
 }
