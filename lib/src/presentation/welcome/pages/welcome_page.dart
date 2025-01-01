@@ -4,8 +4,8 @@ import 'package:flutter_svg/svg.dart';
 part '../widgets/buttom_section.dart';
 part '../widgets/logo_section.dart';
 
-class TemplatePage extends StatelessWidget {
-  const TemplatePage({super.key});
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
