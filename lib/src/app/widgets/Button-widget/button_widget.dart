@@ -167,9 +167,7 @@ class ButtonWidget extends StatelessWidget {
       fontWeight: FontWeight.w600,
       color: isDisabled
           ? Colors.grey
-          : (type == ButtonType.secondary
-              ? AppPalette.black
-              : AppPalette.white),
+          : AppPalette.black
     );
   }
 }
