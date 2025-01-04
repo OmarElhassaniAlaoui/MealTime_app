@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_time_app/src/app/utils/validator.dart';
 import 'package:meal_time_app/src/app/widgets/Text-field-widget/text_field_widget.dart';
 
 class TemplatePage extends StatelessWidget {
@@ -22,12 +23,13 @@ class TemplatePage extends StatelessWidget {
                   isDisabled: true,
                 ),
                 TextFieldWidget(
-                  placeholder: 'Enter your name',
+                  placeholder: 'Enter your password',
                   type: TextInputType.visiblePassword,
                   isHidden: true,
                   controller: TextEditingController(),
                   suffixIconPath: "assets/icons/eye-off.svg",
                   onSuffixPressed: () {},
+                  validator: FormValidatorHelper.validatePassword,
                 ),
               ],
             ),
