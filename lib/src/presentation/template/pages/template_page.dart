@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_time_app/src/app/widgets/Text-field-widget/text_field_widget.dart';
 
 class TemplatePage extends StatelessWidget {
   const TemplatePage({super.key});
@@ -9,15 +10,30 @@ class TemplatePage extends StatelessWidget {
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: [
-              Text("template page"), 
-            ],
+          child: Form(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 20,
+              children: [
+                TextFieldWidget(
+                  placeholder: 'Enter your name',
+                  type: TextInputType.text,
+                  isHidden: true,
+                  isDisabled: true,
+                ),
+                TextFieldWidget(
+                  placeholder: 'Enter your name',
+                  type: TextInputType.visiblePassword,
+                  isHidden: true,
+                  controller: TextEditingController(),
+                  suffixIconPath: "assets/icons/eye-off.svg",
+                  onSuffixPressed: () {},
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
-
-

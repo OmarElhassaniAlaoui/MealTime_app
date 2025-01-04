@@ -5,6 +5,13 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Column( 
+        children: [
+          Text('Login Page'),
+          
+        ],
+      ) , 
+    ) ; 
   }
 }
