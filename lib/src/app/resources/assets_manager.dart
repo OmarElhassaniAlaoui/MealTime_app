@@ -1,13 +1,76 @@
 class AssetsManager {
   AssetsManager._();
 
-  ///
-  /// Welcome Pages
-  ///
-
-
-  ///
-  /// Icons
-  ///
-  
+  // Icons
+  static const String address = 'assets/icons/address.svg';
+  static const String arrow = 'assets/icons/arrow.svg';
+  static const String arrowLeftRight = 'assets/icons/arrow-left-right.svg';
+  static const String arrowUp = 'assets/icons/arrow-up.svg';
+  static const String bag = 'assets/icons/bag.svg';
+  static const String basket = 'assets/icons/basket.svg';
+  static const String basketFilled = 'assets/icons/basket-filled.svg';
+  static const String bell = 'assets/icons/bell.svg';
+  static const String box = 'assets/icons/box.svg';
+  static const String calendar = 'assets/icons/calendar.svg';
+  static const String cancel = 'assets/icons/cancel.svg';
+  static const String cancelCircle = 'assets/icons/cancel-circle.svg';
+  static const String card = 'assets/icons/card.svg';
+  static const String cart = 'assets/icons/cart.svg';
+  static const String cash = 'assets/icons/cash.svg';
+  static const String chat = 'assets/icons/chat.svg';
+  static const String check = 'assets/icons/check.svg';
+  static const String chevron = 'assets/icons/chevron.svg';
+  static const String circle = 'assets/icons/circle.svg';
+  static const String collectionDetails = 'assets/icons/collection-details.svg';
+  static const String discount = 'assets/icons/discount.svg';
+  static const String edit = 'assets/icons/edit.svg';
+  static const String eye = 'assets/icons/eye.svg';
+  static const String eyeOff = 'assets/icons/eye-off.svg';
+  static const String filter = 'assets/icons/filter.svg';
+  static const String forkKnife = 'assets/icons/fork-knife.svg';
+  static const String forkKnifeFilled = 'assets/icons/fork-knife-filled.svg';
+  static const String gift = 'assets/icons/gift.svg';
+  static const String headphones = 'assets/icons/headphones.svg';
+  static const String heart = 'assets/icons/heart.svg';
+  static const String heartFilled = 'assets/icons/heart-filled.svg';
+  static const String home = 'assets/icons/home.svg';
+  static const String image = 'assets/icons/image.svg';
+  static const String info = 'assets/icons/info.svg';
+  static const String list = 'assets/icons/list.svg';
+  static const String location = 'assets/icons/location.svg';
+  static const String locationFilled = 'assets/icons/location-filled.svg';
+  static const String logo = 'assets/icons/logo.svg';
+  static const String logosFacebook = 'assets/icons/logos-facebook.svg';
+  static const String logosSpace = 'assets/icons/logos-space.svg';
+  static const String logout = 'assets/icons/logout.svg';
+  static const String menu = 'assets/icons/menu.svg';
+  static const String message = 'assets/icons/message.svg';
+  static const String mic = 'assets/icons/mic.svg';
+  static const String minus = 'assets/icons/minus.svg';
+  static const String note = 'assets/icons/note.svg';
+  static const String onboarding = 'assets/icons/onboarding.svg';
+  static const String phone = 'assets/icons/phone.svg';
+  static const String phoneFilled = 'assets/icons/phone-filled.svg';
+  static const String plus = 'assets/icons/plus.svg';
+  static const String pot = 'assets/icons/pot.svg';
+  static const String ok = 'assets/icons/ok.svg';
+  static const String icon = 'assets/icons/icon.svg';
+  static const String print = 'assets/icons/print.svg';
+  static const String question = 'assets/icons/question.svg';
+  static const String returnIcon = 'assets/icons/return.svg';
+  static const String search = 'assets/icons/search.svg';
+  static const String settings = 'assets/icons/settings.svg';
+  static const String settingsFilled = 'assets/icons/settings-filled.svg';
+  static const String share = 'assets/icons/share.svg';
+  static const String star = 'assets/icons/star.svg';
+  static const String successIcon = 'assets/icons/success-icon.svg';
+  static const String timer = 'assets/icons/timer.svg';
+  static const String trash = 'assets/icons/trash.svg';
+  static const String truckFilled = 'assets/icons/truck-filled.svg';
+  static const String user = 'assets/icons/user.svg';
+  static const String userFilled = 'assets/icons/user-filled.svg';
+  static const String users = 'assets/icons/users.svg';
+  static const String vector = 'assets/icons/vector.svg';
+  static const String warningCircle = 'assets/icons/warning-circle.svg';
+  static const String web = 'assets/icons/web.svg';
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_time_app/src/app/resources/assets_manager.dart';
 import 'package:meal_time_app/src/app/utils/validator.dart';
 import 'package:meal_time_app/src/app/widgets/Text-field-widget/text_field_widget.dart';
 
@@ -27,7 +28,7 @@ class TemplatePage extends StatelessWidget {
                   type: TextInputType.visiblePassword,
                   isHidden: true,
                   controller: TextEditingController(),
-                  suffixIconPath: "assets/icons/eye-off.svg",
+                  suffixIconPath: AssetsManager.eye,
                   onSuffixPressed: () {},
                   validator: FormValidatorHelper.validatePassword,
                 ),
