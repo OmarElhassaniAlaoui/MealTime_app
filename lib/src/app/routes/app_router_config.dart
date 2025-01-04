@@ -7,13 +7,13 @@ final _shellNavigatorKey = GlobalKey<NavigatorState>();
 class AppPagesConfig {
   late final GoRouter router = GoRouter(
     routes: _routes,
-    initialLocation: AppRoutes.welcome,
+    initialLocation: AppRoutes.template,
   );
 
   static final _routes = <RouteBase>[
     GoRoute(
-      path: AppRoutes.welcome,
-      builder: (context, state) => const WelcomePage(),
+      path: AppRoutes.template,
+      builder: (context, state) => const TemplatePage(),
     ),
   ];
 }

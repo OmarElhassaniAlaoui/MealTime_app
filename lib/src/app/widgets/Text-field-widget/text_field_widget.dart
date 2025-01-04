@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:meal_time_app/src/app/themes/app_palette.dart';
 import 'package:meal_time_app/src/app/themes/app_spacing.dart';
 import 'package:meal_time_app/src/app/themes/app_typography.dart';
@@ -19,6 +20,7 @@ class TextFieldWidget extends StatelessWidget {
     this.suffixIcon,
     this.onChanged,
     this.onSuffixPressed,
+    this.suffixIconPath,
   });
 
   /// Placeholder text to be displayed when the input field is empty.
@@ -53,7 +55,7 @@ class TextFieldWidget extends StatelessWidget {
 
   /// A callback triggered when the suffix icon is pressed.
   final void Function()? onSuffixPressed;
-
+  final String? suffixIconPath;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -96,7 +98,7 @@ class TextFieldWidget extends StatelessWidget {
       ),
       suffixIcon: IconButton(
         onPressed: onSuffixPressed,
-        icon: Icon(suffixIcon),
+        icon: SvgPicture.asset(suffixIconPath??''),
       ),
       contentPadding: EdgeInsets.symmetric(
         vertical: AppSpacing.s20,
