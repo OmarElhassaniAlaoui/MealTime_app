@@ -59,6 +59,7 @@ Current Progress ✅
 - ⬜ Reset password page design
 - ⬜ login page design
 - ⬜ Sign-up page design
+- ⬜ Supabase setup
   
 
 ---
