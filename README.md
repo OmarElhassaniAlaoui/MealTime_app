@@ -49,12 +49,18 @@ lib/
 ```
 Current Progress ✅
 ### Completed Tasks:
-- [x] **Set up project structure** with Clean Architecture.
-- [x] **Theme setup**: Defined color palettes, typography, and spacing.
-- [x] Install required flutter packages
-- [x] setup routes
+- ✅ **Set up project structure** with Clean Architecture.
+- ✅ **Theme setup**: Defined color palettes, typography, and spacing.
+- ✅ Install required flutter packages
+- ✅ setup routes
+- ✅ create button reusable widget
 ### Next Priorities:
-- [x] create button reusable widget
+- ⬜ Onboarding feature
+- ⬜ Reset password page design
+- ⬜ login page design
+- ⬜ Sign-up page design
+  
+
 ---
 
 ## How to Run the Project
