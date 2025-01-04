@@ -54,7 +54,7 @@ Current Progress ✅
 - ✅ Install required flutter packages
 - ✅ setup routes
 - ✅ create button reusable widget
-### Next Priorities:
+### Next Priorities:⬜
 - ⬜ Onboarding feature
 - ⬜ Reset password page design
 - ⬜ login page design
