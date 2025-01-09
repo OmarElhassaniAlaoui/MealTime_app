@@ -47,14 +47,15 @@ lib/
         ├── home/
         ├── widgets/
 ```
-Current Progress ✅
+Current Progress 
+
 ### Completed Tasks:
 - ✅ **Set up project structure** with Clean Architecture.
 - ✅ **Theme setup**: Defined color palettes, typography, and spacing.
 - ✅ Install required flutter packages
 - ✅ setup routes
 - ✅ create button reusable widget
-### Next Priorities:⬜
+### Next Priorities 
 - ⬜ Onboarding feature
 - ⬜ Reset password page design
 - ⬜ login page design
