@@ -47,7 +47,8 @@ lib/
         ├── home/
         ├── widgets/
 ```
-Current Progress 
+
+### Current Progress ...
 
 ### Completed Tasks:
 - ✅ **Set up project structure** with Clean Architecture.
