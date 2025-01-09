@@ -57,11 +57,11 @@ lib/
 - ✅ setup routes
 - ✅ create button reusable widget
 ### Next Priorities 
-- ⬜ Onboarding feature
-- ⬜ Reset password page design
-- ⬜ login page design
-- ⬜ Sign-up page design
 - ⬜ Supabase setup
+- ⬜ Sign-up page design
+- ⬜ login page design
+- ⬜ Reset password page design
+- ⬜ Onboarding feature
   
 
 ---
