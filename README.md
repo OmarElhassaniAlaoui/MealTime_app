@@ -59,6 +59,10 @@ lib/
 - ✅ Supabase setup
 ### Next Priorities 
 - ⬜ Sign-up page design
+    - ⬜ Create UI for the Signup screen (full name, email, password, "Agree to Terms" checkbox).
+    - ⬜ Add validation for all fields.
+    - ⬜ Integrate Supabase authentication for signup functionality.
+    - ⬜ Handle error states (e.g., email already in use, weak password)   
 - ⬜ login page design
 - ⬜ Reset password page design
 - ⬜ Onboarding feature
