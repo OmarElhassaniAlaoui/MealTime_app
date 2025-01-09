@@ -1,9 +1,13 @@
-import 'dart:developer';
-
-import 'package:get_it/get_it.dart';
+import './exports.dart';
 
 final GetIt sl = GetIt.instance;
 
-void registerDependencies() { 
-  log('registerDependencies');
+Future<void> init() async {
+  await dotenv.load(fileName: '.env');
+  // init supabase 
+  final supabase = await Supabase.initialize(
+    url: dotenv.env['SUPABASE_URL']!,
+    anonKey: dotenv.env['SUPABASE_KEY']!,
+  );
+ 
 }
