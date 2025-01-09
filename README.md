@@ -56,8 +56,8 @@ lib/
 - ✅ Install required flutter packages
 - ✅ setup routes
 - ✅ create button reusable widget
+- ✅ Supabase setup
 ### Next Priorities 
-- ⬜ Supabase setup
 - ⬜ Sign-up page design
 - ⬜ login page design
 - ⬜ Reset password page design
