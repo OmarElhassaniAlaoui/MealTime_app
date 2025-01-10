@@ -12,7 +12,9 @@ class _BottomSection extends StatelessWidget {
         children: [
           ButtonWidget(
             text: "Get Started",
-            onPressed: () {},
+            onPressed: () {
+              context.go("") ; 
+            },
           ),
           const SizedBox(height: 10),
           Row(
@@ -20,7 +22,9 @@ class _BottomSection extends StatelessWidget {
             children: [
               const Text("Already have an account?"),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.go("") ; 
+                },
                 style: TextButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   minimumSize: Size.zero,
