@@ -13,7 +13,7 @@ class _BottomSection extends StatelessWidget {
           ButtonWidget(
             text: "Get Started",
             onPressed: () {
-              context.go("") ; 
+              context.go(AppRoutes.signUp);
             },
           ),
           const SizedBox(height: 10),
@@ -23,7 +23,7 @@ class _BottomSection extends StatelessWidget {
               const Text("Already have an account?"),
               TextButton(
                 onPressed: () {
-                  context.go("") ; 
+                  context.go(AppRoutes.signUp);
                 },
                 style: TextButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 4),

@@ -15,5 +15,12 @@ class AppThemes {
     primaryColor: AppPalette.primarySwatch,
     useMaterial3: false,
     scaffoldBackgroundColor: AppPalette.backgroundColor,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppPalette.backgroundColor,
+      foregroundColor: AppPalette.black,
+      elevation: 0,
+      centerTitle: true,
+    ),
+    
   );
 }

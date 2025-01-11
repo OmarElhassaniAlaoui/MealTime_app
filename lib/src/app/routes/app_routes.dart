@@ -9,6 +9,13 @@ abstract class _Paths {
   static const welcome = '/welcome';
   static const home = '/home';
   static const template = '/template';
+  ///
+  /// Auth pages
+  /// 
+  static const signUp = '/sign-up';
+  static const logIn = '/log-in';
+
+
 }
 
 abstract class AppRoutes {
@@ -21,4 +28,11 @@ abstract class AppRoutes {
   static const welcome = _Paths.welcome;
   static const home = _Paths.home;
   static const template = _Paths.template;
+
+  ///
+  /// Auth pages
+  /// 
+  static const signUp = _Paths.signUp;
+  static const logIn = _Paths.logIn;
+  
 }
