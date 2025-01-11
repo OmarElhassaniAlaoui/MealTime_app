@@ -40,7 +40,9 @@ class AssetsManager {
   static const String location = 'assets/icons/location.svg';
   static const String locationFilled = 'assets/icons/location-filled.svg';
   static const String logo = 'assets/icons/logo.svg';
-  static const String logosFacebook = 'assets/icons/logos-facebook.svg';
+  static const String logosFacebook = 'assets/icons/logosfacebook.svg';
+  static const String logosfacebookwhitebg = 'assets/icons/logosfacebookwhitebg.svg';
+  static const String logosgoogleicon = 'assets/icons/logosgoogleicon.svg';
   static const String logosSpace = 'assets/icons/logos-space.svg';
   static const String logout = 'assets/icons/logout.svg';
   static const String menu = 'assets/icons/menu.svg';

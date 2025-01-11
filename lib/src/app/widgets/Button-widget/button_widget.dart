@@ -53,6 +53,7 @@ class ButtonWidget extends StatelessWidget {
   /// An optional icon to display alongside the button text.
   final Widget? icon;
 
+  final Color? bgColor;
 
   /// Creates a customizable button widget.
   const ButtonWidget({
@@ -66,6 +67,7 @@ class ButtonWidget extends StatelessWidget {
     this.isLoading = false,
     this.isDisabled = false,
     this.icon,
+    this.bgColor,
   });
 
   @override
@@ -103,7 +105,7 @@ class ButtonWidget extends StatelessWidget {
           const SizedBox(width: 12),
           icon!,
         ],
-        SizedBox(width:  12 ),
+        SizedBox(width: 12),
         Text(
           text,
           style: _getTextStyle(),
@@ -144,6 +146,8 @@ class ButtonWidget extends StatelessWidget {
         return AppPalette.white;
       case ButtonType.disabled:
         return AppPalette.greySwatch;
+      case ButtonType.custom:
+        return bgColor ?? AppPalette.white;
     }
   }
 
@@ -167,7 +171,9 @@ class ButtonWidget extends StatelessWidget {
       fontWeight: FontWeight.w600,
       color: isDisabled
           ? Colors.grey
-          : AppPalette.black
+          : type == ButtonType.custom
+              ? AppPalette.white
+              : AppPalette.black,
     );
   }
 }

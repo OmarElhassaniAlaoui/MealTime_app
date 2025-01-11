@@ -4,4 +4,5 @@ enum ButtonType {
   secondary,
   tertiary,
   disabled,
+  custom,
 }
