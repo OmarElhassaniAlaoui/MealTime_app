@@ -57,6 +57,8 @@ lib/
 - ✅ setup routes
 - ✅ create button reusable widget
 - ✅ Supabase setup
+### In progress
+- 🟠 Create UI for the Signup screen (full name, email, password, "Agree to Terms" checkbox).
 ### Next Priorities 
 - ⬜ Sign-up page design
     - ⬜ Create UI for the Signup screen (full name, email, password, "Agree to Terms" checkbox).
