@@ -101,8 +101,8 @@ class SignUpPage extends StatelessWidget {
                       validator: FormValidatorHelper.validatePassword,
                     ),
                     const Gap(AppSpacing.s18),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                    Wrap(
+                      crossAxisAlignment: WrapCrossAlignment.center,
                       children: [
                         Checkbox(
                           value: false,
@@ -121,45 +121,36 @@ class SignUpPage extends StatelessWidget {
                             AppPalette.white,
                           ),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "I agree to Mealtime's",
-                              style: TextStyle(
-                                fontSize: AppTypography.b1Regular,
-                                fontFamily: AppTypography.familyDMSans,
-                                fontWeight: AppTypography.w400,
-                              ),
+                        Text(
+                          "I agree to Mealtime's",
+                          style: TextStyle(
+                            fontSize: AppTypography.b1Regular,
+                            fontFamily: AppTypography.familyDMSans,
+                            fontWeight: AppTypography.w400,
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            context.go(AppRoutes.signUp);
+                          },
+                          style: TextButton.styleFrom(
+                            minimumSize: Size.zero,
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
                             ),
-                            const Gap(AppSpacing.s4),
-                            TextButton(
-                              onPressed: () {
-                                context.go(AppRoutes.signUp);
-                              },
-                              style: TextButton.styleFrom(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 4),
-                                minimumSize: Size.zero,
-                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
-                              child: const Text(
-                                "Terms & Conditions",
-                                style: TextStyle(
-                                  decoration: TextDecoration.underline,
-                                  color: Colors.black,
-                                  fontFamily: AppTypography.familyDMSans,
-                                  fontWeight: AppTypography.w700,
-                                  fontSize: AppTypography.b2Regular,
-                                ),
-                              ),
+                          ),
+                          child: const Text(
+                            "Terms & Conditions",
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Colors.black,
+                              fontFamily: AppTypography.familyDMSans,
+                              fontWeight: AppTypography.w700,
+                              fontSize: AppTypography.b1Regular,
                             ),
-                            // style: TextButton.styleFrom(
-                          ],
-                        )
+                          ),
+                        ),
                       ],
                     ),
                   ],
