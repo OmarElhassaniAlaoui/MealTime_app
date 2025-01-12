@@ -65,8 +65,8 @@ lib/
     - ⬜ Add validation for all fields.
     - ⬜ Integrate Supabase authentication for signup functionality.
     - ⬜ Handle error states (e.g., email already in use, weak password)   
-- ⬜ login page design
-- ⬜ Reset password page design
+- ⬜ login feature
+- ⬜ Reset password feature
 - ⬜ Onboarding feature
   
 
