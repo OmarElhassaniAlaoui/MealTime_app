@@ -60,7 +60,7 @@ lib/
 ### In progress
 - 🟠 Create UI for the Signup screen (full name, email, password, "Agree to Terms" checkbox).
 ### Next Priorities 
-- ⬜ Sign-up page design
+- ⬜ Sign-up feature
     - ⬜ Create UI for the Signup screen (full name, email, password, "Agree to Terms" checkbox).
     - ⬜ Add validation for all fields.
     - ⬜ Integrate Supabase authentication for signup functionality.
