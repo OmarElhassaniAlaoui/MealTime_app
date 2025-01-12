@@ -235,7 +235,6 @@ class SignUpPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // style: TextButton.styleFrom(
                   ],
                 ),
               ),
