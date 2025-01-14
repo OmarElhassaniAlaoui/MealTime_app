@@ -1,6 +1,5 @@
 part of 'signup_cubit.dart';
 
-enum SignUpStatus { initial, loading, success, error, invalid }
 
 sealed class SignupState extends Equatable {
   const SignupState();
@@ -43,9 +42,6 @@ final class TermsAndConditionsAccepted extends SignupState {
 }
 
 final class TermsAndConditionsNotAccepted extends SignupState {} 
-
-
-
 ///
 /// Form fiels state
 /// 
