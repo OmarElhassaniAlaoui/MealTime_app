@@ -6,7 +6,8 @@ part 'signup_state.dart';
 class SignupCubit extends Cubit<SignupState> {
   SignupCubit() : super(SignupInitial());
 
-  bool termsCondionsAgreed() {
-    return true;
+  void  termsCondionsAgreed(bool isTermsAndConditionsAccepted) {
+    bool isAccepted = isTermsAndConditionsAccepted;
+    emit(TermsAndConditionsAccepted(isAccepted));
   }
 }
