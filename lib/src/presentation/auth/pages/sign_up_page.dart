@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
@@ -13,12 +12,15 @@ import 'package:meal_time_app/src/app/utils/validator.dart';
 import 'package:meal_time_app/src/app/widgets/Button-widget/button_enum.dart';
 import 'package:meal_time_app/src/app/widgets/Button-widget/button_widget.dart';
 import 'package:meal_time_app/src/app/widgets/Text-field-widget/text_field_widget.dart';
+import 'package:meal_time_app/src/presentation/auth/bloc/sign-up-cubit/signup_cubit.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    bool isTermsAndConditionsAccepted = false;
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -104,22 +106,30 @@ class SignUpPage extends StatelessWidget {
                     Wrap(
                       crossAxisAlignment: WrapCrossAlignment.center,
                       children: [
-                        Checkbox(
-                          value: false,
-                          onChanged: (value) {
-                            log("Value: $value");
+                        BlocBuilder<SignupCubit, SignupState>(
+                          builder: (context, state) {
+                            if (state is TermsAndConditionsAccepted) {
+                              isTermsAndConditionsAccepted =
+                                  state.isTermsAndConditionsAccepted;
+                            }
+                            return Checkbox(
+                              value: isTermsAndConditionsAccepted,
+                              onChanged: (value) {
+                                context
+                                    .read<SignupCubit>()
+                                    .termsCondionsAgreed(value ?? false);
+                              },
+                              activeColor: AppPalette.primarySwatch,
+                              side: BorderSide(
+                                color: AppPalette.greySwatch,
+                                width: 1,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.circular(AppSpacing.r4),
+                              ),
+                            );
                           },
-                          activeColor: AppPalette.primarySwatch,
-                          side: BorderSide(
-                            color: AppPalette.greySwatch,
-                            width: 1,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(AppSpacing.r4),
-                          ),
-                          fillColor: WidgetStateProperty.all(
-                            AppPalette.white,
-                          ),
                         ),
                         Text(
                           "I agree to Mealtime's",
