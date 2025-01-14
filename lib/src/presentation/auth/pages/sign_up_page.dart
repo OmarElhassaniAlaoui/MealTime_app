@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,13 +16,23 @@ import 'package:meal_time_app/src/app/widgets/Button-widget/button_widget.dart';
 import 'package:meal_time_app/src/app/widgets/Text-field-widget/text_field_widget.dart';
 import 'package:meal_time_app/src/presentation/auth/bloc/sign-up-cubit/signup_cubit.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    bool isTermsAndConditionsAccepted = false;
+  State<SignUpPage> createState() => _SignUpPageState();
+}
 
+class _SignUpPageState extends State<SignUpPage> {
+  final GlobalKey _formKey = GlobalKey<FormState>();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  bool isTermsAndConditionsAccepted = false;
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -65,7 +77,7 @@ class SignUpPage extends StatelessWidget {
                     const Gap(AppSpacing.s8),
                     TextFieldWidget(
                       placeholder: 'Enter your name',
-                      controller: TextEditingController(),
+                      controller: _nameController,
                       validator: FormValidatorHelper.validateName,
                     ),
                     const Gap(AppSpacing.s18),
@@ -80,7 +92,7 @@ class SignUpPage extends StatelessWidget {
                     Gap(AppSpacing.s8),
                     TextFieldWidget(
                       placeholder: 'Enter your email',
-                      controller: TextEditingController(),
+                      controller: _emailController,
                       validator: FormValidatorHelper.validateEmail,
                     ),
                     const Gap(AppSpacing.s18),
@@ -97,7 +109,7 @@ class SignUpPage extends StatelessWidget {
                       placeholder: 'Enter your password',
                       type: TextInputType.visiblePassword,
                       isHidden: true,
-                      controller: TextEditingController(),
+                      controller: _passwordController,
                       suffixIconPath: AssetsManager.eye,
                       onSuffixPressed: () {},
                       validator: FormValidatorHelper.validatePassword,
@@ -134,7 +146,7 @@ class SignUpPage extends StatelessWidget {
                         Text(
                           "I agree to Mealtime's",
                           style: TextStyle(
-                            fontSize: AppTypography.b1Regular,
+                            fontSize: AppTypography.b3Regular,
                             fontFamily: AppTypography.familyDMSans,
                             fontWeight: AppTypography.w400,
                           ),
@@ -157,7 +169,7 @@ class SignUpPage extends StatelessWidget {
                               color: Colors.black,
                               fontFamily: AppTypography.familyDMSans,
                               fontWeight: AppTypography.w700,
-                              fontSize: AppTypography.b1Regular,
+                              fontSize: AppTypography.b3Regular,
                             ),
                           ),
                         ),
@@ -167,13 +179,27 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
               const Gap(AppSpacing.s20),
-              ButtonWidget(
-                text: "Create account",
-                onPressed: () {
-                  context.go(AppRoutes.welcome);
+              BlocBuilder<SignupCubit, SignupState>(
+                builder: (context, state) {
+                  if (state is TermsAndConditionsAccepted) {
+                    return ButtonWidget(
+                      text: "Create account",
+                      onPressed: () {
+                        log("create account");
+                      },
+                      isDisabled: false,
+                      type: ButtonType.primary,
+                    );
+                  }
+                  return ButtonWidget(
+                    text: "Create account",
+                    onPressed: () {
+                      context.go(AppRoutes.welcome);
+                    },
+                    isDisabled: true,
+                    type: ButtonType.disabled,
+                  );
                 },
-                isDisabled: true,
-                type: ButtonType.disabled,
               ),
               const Gap(AppSpacing.s20),
               const Row(
