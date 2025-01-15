@@ -22,6 +22,7 @@ class AssetsManager {
   static const String chevron = 'assets/icons/chevron.svg';
   static const String circle = 'assets/icons/circle.svg';
   static const String collectionDetails = 'assets/icons/collection-details.svg';
+  static const String checkDuotone = 'assets/icons/Check-duotone.svg';
   static const String discount = 'assets/icons/discount.svg';
   static const String edit = 'assets/icons/edit.svg';
   static const String eye = 'assets/icons/eye.svg';
@@ -41,7 +42,8 @@ class AssetsManager {
   static const String locationFilled = 'assets/icons/location-filled.svg';
   static const String logo = 'assets/icons/logo.svg';
   static const String logosFacebook = 'assets/icons/logosfacebook.svg';
-  static const String logosfacebookwhitebg = 'assets/icons/logosfacebookwhitebg.svg';
+  static const String logosfacebookwhitebg =
+      'assets/icons/logosfacebookwhitebg.svg';
   static const String logosgoogleicon = 'assets/icons/logosgoogleicon.svg';
   static const String logosSpace = 'assets/icons/logos-space.svg';
   static const String logout = 'assets/icons/logout.svg';

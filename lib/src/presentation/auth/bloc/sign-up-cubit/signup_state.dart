@@ -45,3 +45,19 @@ final class TermsAndConditionsNotAccepted extends SignupState {}
 ///
 /// Form fiels state
 /// 
+
+final class UserTypingState extends SignupState  {}
+
+final class FormFieldsValid extends SignupState {}
+
+final class FormFieldsInvalid extends SignupState {}
+
+final class FormFieldsEmpty extends SignupState {}
+
+final class ObscureTextToggled extends SignupState {
+  final bool isObscureText;
+  const ObscureTextToggled(this.isObscureText);
+
+  @override
+  List<Object> get props => [isObscureText];
+}

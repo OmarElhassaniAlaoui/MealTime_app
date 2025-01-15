@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -24,10 +22,10 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final GlobalKey _formKey = GlobalKey<FormState>();
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   bool isTermsAndConditionsAccepted = false;
 
@@ -63,6 +61,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const Gap(AppSpacing.s24),
               Form(
+                key: _formKey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -105,14 +104,39 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                     ),
                     Gap(AppSpacing.s8),
-                    TextFieldWidget(
-                      placeholder: 'Enter your password',
-                      type: TextInputType.visiblePassword,
-                      isHidden: true,
-                      controller: _passwordController,
-                      suffixIconPath: AssetsManager.eye,
-                      onSuffixPressed: () {},
-                      validator: FormValidatorHelper.validatePassword,
+                    BlocBuilder<SignupCubit, SignupState>(
+                      buildWhen: (previous, current) =>
+                          current is ObscureTextToggled,
+                      builder: (context, state) {
+                        if (state is ObscureTextToggled) {
+                          return TextFieldWidget(
+                            placeholder: 'Enter your password',
+                            type: TextInputType.visiblePassword,
+                            isHidden: state.isObscureText,
+                            controller: _passwordController,
+                            suffixIconPath: state.isObscureText
+                                ? AssetsManager.eyeOff
+                                : AssetsManager.eye,
+                            onSuffixPressed: () {
+                              context
+                                  .read<SignupCubit>()
+                                  .toggleObscureText(!state.isObscureText);
+                            },
+                            validator: FormValidatorHelper.validatePassword,
+                          );
+                        }
+                        return TextFieldWidget(
+                          placeholder: 'Enter your password',
+                          type: TextInputType.visiblePassword,
+                          isHidden: true,
+                          controller: _passwordController,
+                          suffixIconPath: AssetsManager.eyeOff,
+                          onSuffixPressed: () {
+                            context.read<SignupCubit>().toggleObscureText(true);
+                          },
+                          validator: FormValidatorHelper.validatePassword,
+                        );
+                      },
                     ),
                     const Gap(AppSpacing.s18),
                     Wrap(
@@ -180,12 +204,16 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const Gap(AppSpacing.s20),
               BlocBuilder<SignupCubit, SignupState>(
+                buildWhen: (previous, current) =>
+                    current is TermsAndConditionsAccepted,
                 builder: (context, state) {
                   if (state is TermsAndConditionsAccepted) {
                     return ButtonWidget(
                       text: "Create account",
                       onPressed: () {
-                        log("create account");
+                        if (_formKey.currentState!.validate()) {
+                          context.go(AppRoutes.welcome);
+                        }
                       },
                       isDisabled: false,
                       type: ButtonType.primary,
@@ -193,9 +221,6 @@ class _SignUpPageState extends State<SignUpPage> {
                   }
                   return ButtonWidget(
                     text: "Create account",
-                    onPressed: () {
-                      context.go(AppRoutes.welcome);
-                    },
                     isDisabled: true,
                     type: ButtonType.disabled,
                   );
