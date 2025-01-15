@@ -7,13 +7,14 @@ part 'signup_state.dart';
 class SignupCubit extends Cubit<SignupState> {
   SignupCubit() : super(SignupInitial());
 
-
-
-  void  termsCondionsAgreed(bool isTermsAndConditionsAccepted) {
+  void termsCondionsAgreed(bool isTermsAndConditionsAccepted) {
     bool isAccepted = isTermsAndConditionsAccepted;
     emit(TermsAndConditionsAccepted(isAccepted));
-  } 
+  }
 
+  void validatFormFields(GlobalKey<FormState> formKey) {}
 
-
+  void toggleObscureText(bool isObscureText) {
+    emit(ObscureTextToggled(isObscureText));
+  }
 }
