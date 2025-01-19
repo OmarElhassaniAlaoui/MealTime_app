@@ -93,6 +93,8 @@ class _SignUpPageState extends State<SignUpPage> {
                       placeholder: 'Enter your email',
                       controller: _emailController,
                       validator: FormValidatorHelper.validateEmail,
+                      errorIconPath: AssetsManager.worningIcon,
+                      successIconPath: AssetsManager.check,
                     ),
                     const Gap(AppSpacing.s18),
                     Text(

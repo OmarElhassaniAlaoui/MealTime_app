@@ -27,6 +27,7 @@ class AssetsManager {
   static const String edit = 'assets/icons/edit.svg';
   static const String eye = 'assets/icons/eye.svg';
   static const String eyeOff = 'assets/icons/eye-off.svg';
+  static const String worningIcon = 'assets/icons/worningIcon.svg';
   static const String filter = 'assets/icons/filter.svg';
   static const String forkKnife = 'assets/icons/fork-knife.svg';
   static const String forkKnifeFilled = 'assets/icons/fork-knife-filled.svg';
