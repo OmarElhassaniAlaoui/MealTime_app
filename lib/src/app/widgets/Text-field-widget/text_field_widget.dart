@@ -21,6 +21,8 @@ class TextFieldWidget extends StatelessWidget {
     this.onChanged,
     this.onSuffixPressed,
     this.suffixIconPath,
+    this.errorIconPath,
+    this.successIconPath,
   });
 
   /// Placeholder text to be displayed when the input field is empty.
@@ -55,7 +57,16 @@ class TextFieldWidget extends StatelessWidget {
 
   /// A callback triggered when the suffix icon is pressed.
   final void Function()? onSuffixPressed;
+
+  /// Path to the suffix icon.
   final String? suffixIconPath;
+
+  /// Path to the error icon.
+  final String? errorIconPath;
+
+  /// Path to the success icon.
+  final String? successIconPath;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -78,6 +89,8 @@ class TextFieldWidget extends StatelessWidget {
 
   /// Builds the input field decoration, including borders, colors, and suffix icon.
   InputDecoration? _buildDecoration() {
+    bool hasError = validator?.call(controller?.text) != null;
+
     return InputDecoration(
       hintText: placeholder,
       hintStyle: TextStyle(
@@ -96,10 +109,15 @@ class TextFieldWidget extends StatelessWidget {
           horizontal: AppSpacing.s8,
         ),
       ),
-      suffixIcon: IconButton(
-        onPressed: onSuffixPressed,
-        icon: SvgPicture.asset(suffixIconPath??''),
-      ),
+      suffixIcon: hasError
+          ? IconButton(
+              onPressed: onSuffixPressed,
+              icon: SvgPicture.asset(errorIconPath ?? ''),
+            )
+          : IconButton(
+              onPressed: onSuffixPressed,
+              icon: SvgPicture.asset(successIconPath ?? ''),
+            ),
       contentPadding: EdgeInsets.symmetric(
         vertical: AppSpacing.s20,
       ),
@@ -107,7 +125,7 @@ class TextFieldWidget extends StatelessWidget {
   }
 
   /// Sets the border style and color for the input field.
-  /// 
+  ///
   /// - [color]: The color of the border.
   InputBorder? _setInputBorder(Color color) {
     return OutlineInputBorder(
